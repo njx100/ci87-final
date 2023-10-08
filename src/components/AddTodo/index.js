@@ -24,7 +24,7 @@ const AddTodo = ({ addTodo }) => {
           setText(event.target.value);
         }}
       />
-      <Button type="primary" onClick={() => handleAdd()}>
+      <Button className="btn" type="primary" onClick={() => handleAdd()}>
         Add
       </Button>
     </div>
