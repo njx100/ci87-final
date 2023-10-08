@@ -35,6 +35,7 @@ const TodoPage = () => {
 
   const deleteAll = () => {
     setTodos([]);
+    localStorage.setItem("todos", JSON.stringify([]));
   };
 
   useEffect(() => {
