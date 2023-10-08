@@ -8,9 +8,9 @@ const TodoPage = () => {
   const [todos, setTodos] = useState([]);
 
   const addTodo = (newTodo) => {
-    setTodos((prevTodos) => [...prevTodos, newTodo]);
-    localStorage.setItem("todos", JSON.stringify(todos));
-    localStorage.setItem("todos", JSON.stringify(todos));
+    const newList = [...todos, newTodo];
+    setTodos(newList);
+    localStorage.setItem("todos", JSON.stringify(newList));
   };
 
   const updateStatus = (id, isCompleted) => {
@@ -40,7 +40,7 @@ const TodoPage = () => {
 
   useEffect(() => {
     const TODOS = JSON.parse(localStorage.getItem("todos"));
-    setTodos(TODOS);
+    TODOS ? setTodos(TODOS) : setTodos([]);
   }, []);
 
   return (
