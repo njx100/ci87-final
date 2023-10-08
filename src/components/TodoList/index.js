@@ -58,9 +58,9 @@ const TodoList = ({
           deleteTodo={deleteTodo}
         />
       ))}
-      <Button onClick={() => deleteAll()}>
+      <Button className="del-all-btn" onClick={() => deleteAll()}>
         <AiOutlineDelete />
-        Delete All
+        <div> Delete All</div>
       </Button>
     </div>
   );

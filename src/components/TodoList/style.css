@@ -1,8 +1,28 @@
+.todo-filter {
+  display: flex;
+  height: 30px;
+  justify-content: space-evenly;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 0.2rem;
+}
+
 .todo-filter button {
   all: unset;
   margin: auto 1.5rem;
 }
 
+.todo-filter button:hover {
+  border-bottom: 2px solid rgba(74, 81, 191, 0.8);
+}
+
 .active {
   border-bottom: 3px blue solid;
+}
+
+.del-all-btn {
+  display: flex;
+  align-items: center;
+  background-color: red;
+  color: white;
+  float: right;
 }
