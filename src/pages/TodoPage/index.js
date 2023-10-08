@@ -1,7 +1,7 @@
 import TodoList from "../../components/TodoList";
 import { useState, useEffect } from "react";
 import "./style.css";
-const TODOS = [{ id: "1", task: "Go jogging", isCompleted: false }];
+import { TODOS } from "../../utilities/todos";
 
 const TodoPage = () => {
   //   const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("todos")));
@@ -21,7 +21,7 @@ const TodoPage = () => {
       return todo;
     });
     setTodos(newStatus);
-    console.log(todos);
+
     // localStorage.setItem("todos", JSON.stringify(newStatus));
   };
 
@@ -37,7 +37,7 @@ const TodoPage = () => {
   const deleteAll = () => {
     setTodos([]);
   };
-
+  console.log(todos);
   //   useEffect(() => {
   //     //   setTodos(JSON.parse(localStorage.getItem("todos")));
   //     setTodos(todos);

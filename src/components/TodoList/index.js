@@ -47,6 +47,7 @@ const TodoList = ({
       {todos.map(({ id, task, isCompleted }) => (
         <Todo
           key={id}
+          id={id}
           task={task}
           isCompleted={isCompleted}
           updateStatus={updateStatus}

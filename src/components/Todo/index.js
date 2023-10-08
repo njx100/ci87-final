@@ -3,12 +3,12 @@ import { AiOutlineDelete } from "react-icons/ai";
 
 import "./style.css";
 
-const Todo = ({ key, task, isCompleted, updateStatus, deleteTodo }) => {
+const Todo = ({ id, task, isCompleted, updateStatus, deleteTodo }) => {
   const [completed, setCompleted] = useState(isCompleted);
+
   const handleClick = () => {
     setCompleted(!completed);
-
-    updateStatus(key, isCompleted);
+    updateStatus(id, isCompleted);
   };
   const todoClassName = `todo-text ${completed && "todo-completed"}`;
 
@@ -22,7 +22,7 @@ const Todo = ({ key, task, isCompleted, updateStatus, deleteTodo }) => {
         />
         <div className={todoClassName}>{task}</div>
       </div>
-      <button onClick={() => deleteTodo(key)}>
+      <button onClick={() => deleteTodo(id)}>
         <AiOutlineDelete />
       </button>
     </div>
