@@ -1,6 +1,6 @@
 import AddTodo from "../AddTodo";
 import Todo from "../Todo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./style.css";
 import { Button } from "antd";
 import { AiOutlineDelete } from "react-icons/ai";
@@ -33,6 +33,10 @@ const TodoList = ({
         break;
     }
   };
+
+  useEffect(() => {
+    setTodos(todosProps);
+  }, [todosProps]);
 
   return (
     <div className="todo-list">

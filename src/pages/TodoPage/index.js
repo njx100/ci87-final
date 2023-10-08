@@ -21,7 +21,6 @@ const TodoPage = () => {
       return todo;
     });
     setTodos(newStatus);
-
     // localStorage.setItem("todos", JSON.stringify(newStatus));
   };
 
@@ -38,10 +37,10 @@ const TodoPage = () => {
     setTodos([]);
   };
   console.log(todos);
-  //   useEffect(() => {
-  //     //   setTodos(JSON.parse(localStorage.getItem("todos")));
-  //     setTodos(todos);
-  //   }, []);
+  useEffect(() => {
+    //   setTodos(JSON.parse(localStorage.getItem("todos")));
+    setTodos(todos);
+  }, [deleteTodo, updateStatus, addTodo]);
 
   return (
     <div className="todo-page">
