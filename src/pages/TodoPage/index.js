@@ -9,7 +9,7 @@ const TodoPage = () => {
 
   const addTodo = (newTodo) => {
     setTodos((prevTodos) => [...prevTodos, newTodo]);
-
+    localStorage.setItem("todos", JSON.stringify(todos));
     localStorage.setItem("todos", JSON.stringify(todos));
   };
 
