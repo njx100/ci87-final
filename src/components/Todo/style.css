@@ -1,0 +1,21 @@
+.todo {
+  display: flex;
+  margin: 1rem;
+  justify-content: space-between;
+}
+
+.todo-left {
+  display: flex;
+}
+
+.todo-text {
+  margin-left: 0.5rem;
+}
+
+.todo-completed {
+  text-decoration: line-through;
+}
+
+button {
+  all: unset;
+}

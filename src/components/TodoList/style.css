@@ -1,0 +1,8 @@
+.todo-filter button {
+  all: unset;
+  margin: auto 1.5rem;
+}
+
+.active {
+  border-bottom: 3px blue solid;
+}
