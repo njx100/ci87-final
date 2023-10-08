@@ -9,7 +9,7 @@ const TodoPage = () => {
 
   const addTodo = (newTodo) => {
     setTodos((prevTodos) => [...prevTodos, newTodo]);
-    console.log(todos);
+
     // localStorage.setItem("todos", JSON.stringify(todos));
   };
 
@@ -30,13 +30,12 @@ const TodoPage = () => {
       return false;
     });
     setTodos(newTodoList);
-    console.log(todos);
   };
 
   const deleteAll = () => {
     setTodos([]);
   };
-  console.log(todos);
+
   useEffect(() => {
     //   setTodos(JSON.parse(localStorage.getItem("todos")));
     setTodos(todos);
